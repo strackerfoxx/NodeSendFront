@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 body{
-    /* background-image: url("/public/img/backgroundLogo.jpg");
-    background-image: url("../public/img/backgroundLogin.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
     background-color: #0b1f34;
 }
 .background{
@@ -29,8 +24,6 @@ body{
 .blur{
     filter: blur(0px); 
 }
-.no-blur{
-}
 .center{
     border: 2px solid rgba(255, 255, 255, 0.174);
     border-radius: 1rem;
@@ -43,6 +36,13 @@ body{
     padding: 3rem 2rem;
     gap: 1rem;
     margin-bottom: 4rem;
+}
+@media(max-width: 425px){
+    .center{
+        width: 100%;
+        display: block;
+        padding: 0;
+    }
 }
 @media(max-width: 1024px){
     .center{

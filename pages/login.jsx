@@ -23,7 +23,8 @@ export default function Login() {
       localStorage.setItem("userNombre", data.nombre)
       return Router.push("/")
     } catch (error) {
-      setAlerta({error: true, msg: error.response.data.msg})
+      // setAlerta({error: true, msg: error.response.data.msg})
+      console.log(error.response)
     }
   }
   return (
