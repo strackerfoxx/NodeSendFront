@@ -26,7 +26,7 @@ export default function Home() {
     const token = localStorage.getItem("user")
     try {
       // Realiza la petición POST utilizando Axios
-      const {data} = await axios.post(`http://localhost:4000/api/archivo/downloads-${downloads || 10}-password-${password || ""}`, formData, {
+      const {data} = await axios.post(`${process.env.API_URL}api/archivo/downloads-${downloads || 10}-password-${password || ""}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token || ""}`

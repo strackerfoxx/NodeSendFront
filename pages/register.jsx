@@ -19,7 +19,7 @@ export default function Register() {
     }
 
     try {
-      const {data} = await axios.post("http://localhost:4000/api/usuarios", {"nombre": nombre,"email": email,"password": password})
+      const {data} = await axios.post(`${process.env.API_URL}api/usuarios`, {"nombre": nombre,"email": email,"password": password})
       setTimeout(() => {
         router.push("/login")
       }, 2000);
