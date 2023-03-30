@@ -19,7 +19,7 @@ export default function Register() {
     }
 
     try {
-      const {data} = await axios.post(`${process.env.API_URL}api/usuarios`, {"nombre": nombre,"email": email,"password": password})
+      const {data} = await axios.post(`https://meek-shortbread-4d7c94.netlify.app/api/usuarios`, {"nombre": nombre,"email": email,"password": password})
       setTimeout(() => {
         router.push("/login")
       }, 2000);

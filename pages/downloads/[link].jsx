@@ -9,7 +9,7 @@ export default function Archivo({enlace}) {
         {enlace ? (
           <>
             <h1 className='font-bold text-4xl text-center mt-5'>Download</h1>
-            <Link href={`${process.env.API_URL}api/archivo/${enlace}`} className="flex items-center justify-center text-center">
+            <Link href={`https://meek-shortbread-4d7c94.netlify.app/api/archivo/${enlace}`} className="flex items-center justify-center text-center">
               <button className="py-3 px-24 mt-20 bg-orange-500 hover:bg-red-600 rounded-lg font-bold ">Descargar Archivo</button>
             </Link>
           </>
@@ -24,7 +24,7 @@ export default function Archivo({enlace}) {
 }
 
 export async function getServerSideProps({query: {link}}){
-  const {data: enlace} = await axios(`${process.env.API_URL}api/link/${link}`)
+  const {data: enlace} = await axios(`https://meek-shortbread-4d7c94.netlify.app/api/link/${link}`)
   return{
     props: {
       enlace

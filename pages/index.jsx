@@ -26,7 +26,7 @@ export default function Home() {
     const token = localStorage.getItem("user")
     try {
       // Realiza la petición POST utilizando Axios
-      const {data} = await axios.post(`${process.env.API_URL}api/archivo/downloads-${downloads || 10}-password-${password || ""}`, formData, {
+      const {data} = await axios.post(`https://meek-shortbread-4d7c94.netlify.app/api/archivo/downloads-${downloads || 10}-password-${password || ""}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token || ""}`

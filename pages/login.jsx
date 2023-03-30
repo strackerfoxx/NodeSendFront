@@ -15,7 +15,7 @@ export default function Login() {
       return setAlerta({error: true, msg: "Por favor, llenar todos los campos"})
   }
     try {
-      const {data} = await axios.post(`${process.env.API_URL}api/usuarios/login`, {
+      const {data} = await axios.post(`https://meek-shortbread-4d7c94.netlify.app/api/usuarios/login`, {
         "email": "correo@correo.com",
         "password": "1234567"
       })
